@@ -18,6 +18,12 @@
                     <p v-if="inventory > 10">In Stock</p>
                     <p v-else-if="inventory<=10 && inventory>0">Almost sold out!</p>
                     <p v-else>Out of Stock</p>
+                    <ul>
+                        <li v-for="detail in details">{{ detail }}</li>    <!-- built in for loop! -->
+                    </ul>
+                    <div v-for="varient in varients">
+                        <p>{{ varient.varientColor }}</p>
+                    </div>
                 </div>
             </div>
         </div>
