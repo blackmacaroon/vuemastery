@@ -10,14 +10,24 @@ var app = new Vue({
         varients: [
             {
                 varientId: 2234,
-                varientColor: "green"
+                varientColor: "green",
+                varientImage: "./assets/vmSocks-green-onWhite.jpg"
             },
             {
                 varientId: 2235,
-                varientColor: "blue"
+                varientColor: "blue",
+                varientImage: "./assets/vmSocks-blue-onWhite.jpg"
             }
         ],
         sizes: ["SM-MED", "MED-LG"],
         cart: 0
+    },
+    methods: {
+        addToCart() {
+            this.cart += 1
+        },
+        updateProduct(varientImage) {
+            this.image = varientImage
+        }
     }
 })

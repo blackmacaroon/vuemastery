@@ -22,14 +22,14 @@
                         <li v-for="detail in details">{{ detail }}</li>    <!-- built in for loop! -->
                     </ul>
                     <div v-for="varient in varients" :key="varient.varientId">
-                        <p>{{ varient.varientColor }}</p>
+                        <p @mouseover="updateProduct(varient.varientImage)">{{ varient.varientColor }}</p>
                     </div>
                     <ul>
                         <li v-for="size in sizes">{{ size }}</li>
                     </ul>
-                    <button>add to cart</button>
+                    <button v-on:click="addToCart">add to cart</button>
                     <div class="cart">
-                        <p>{{ cart }}</p>
+                        <p>Cart{{ cart }}</p>
                     </div>
 
                 </div>
