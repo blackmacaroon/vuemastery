@@ -15,9 +15,9 @@
                 <div class="product-info">
                     <h1>{{ Product }}</h1>
                     <span v-if="onSale">On Sale Now!</span>
-                    <p v-if="inventory > 10">In Stock</p>
+                    <p v-if="inventory > 10">in stock</p>
                     <p v-else-if="inventory<=10 && inventory>0">Almost sold out!</p>
-                    <p v-else>Out of Stock</p>
+                    <p v-else>out of stock</p>
                     <ul>
                         <li v-for="detail in details">{{ detail }}</li>    <!-- built in for loop! -->
                     </ul>
@@ -27,6 +27,11 @@
                     <ul>
                         <li v-for="size in sizes">{{ size }}</li>
                     </ul>
+                    <button>add to cart</button>
+                    <div class="cart">
+                        <p>{{ cart }}</p>
+                    </div>
+
                 </div>
             </div>
         </div>
