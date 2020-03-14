@@ -21,9 +21,12 @@
                     <ul>
                         <li v-for="detail in details">{{ detail }}</li>    <!-- built in for loop! -->
                     </ul>
-                    <div v-for="varient in varients">
+                    <div v-for="varient in varients" :key="varient.varientId">
                         <p>{{ varient.varientColor }}</p>
                     </div>
+                    <ul>
+                        <li v-for="size in sizes">{{ size }}</li>
+                    </ul>
                 </div>
             </div>
         </div>
