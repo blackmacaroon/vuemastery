@@ -27,7 +27,8 @@
                     <ul>
                         <li v-for="size in sizes">{{ size }}</li>
                     </ul>
-                    <button v-on:click="addToCart">add to cart</button>
+                    <button @click="addToCart">add to cart</button>
+                    <button @click="removeFromCart">remove from cart</button>
                     <div class="cart">
                         <p>Cart{{ cart }}</p>
                     </div>
