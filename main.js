@@ -1,6 +1,7 @@
 var app = new Vue({
     el: '#app',
     data: {
+        brand: 'Vue Mastery',
         product: 'Socks',
         image: 'https://www.vuemastery.com/images/challenges/vmSocks-green-onWhite.jpg',
         link: 'https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=socks',
@@ -32,6 +33,11 @@ var app = new Vue({
         },
         updateProduct(varientImage) {
             this.image = varientImage
+        }
+    },
+    computed: {
+        title() {
+            return this.brand + ' ' + this.product
         }
     }
 })
